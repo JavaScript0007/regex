@@ -14,7 +14,7 @@ const wildCardEx = /Code./
 // regex with match method, returns array with exact word inside of array
 console.log(coder.match(wildCardEx))
 
-// regex with character classes
+// regex with character classes(character sets)
 
 // for example, you want to match "bag", "big", and "bug" but not "bog"
 // you can create the regex /b[aiu]g/ to do this. The [aiu] is the character class that will only match the characters "a", "i", or "u".
@@ -28,3 +28,13 @@ bigStr.match(bgRegex); // Returns ["big"]
 bagStr.match(bgRegex); // Returns ["bag"]
 bugStr.match(bgRegex); // Returns ["bug"]
 bogStr.match(bgRegex); // Returns null
+
+// define a range of characters to match using a hyphen
+
+let catStr = "cat";
+let batStr = "bat";
+let matStr = "mat";
+let bgRegex = /[a-e]at/;
+catStr.match(bgRegex); // Returns ["cat"]
+batStr.match(bgRegex); // Returns ["bat"]
+matStr.match(bgRegex); // Returns null
