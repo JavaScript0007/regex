@@ -34,10 +34,10 @@ bogStr.match(bgRegex); // Returns null
 let catStr = "cat";
 let batStr = "bat";
 let matStr = "mat";
-let bgRegex = /[a-e]at/;
-catStr.match(bgRegex); // Returns ["cat"]
-batStr.match(bgRegex); // Returns ["bat"]
-matStr.match(bgRegex); // Returns null
+let rangeRegex = /[a-e]at/;
+catStr.match(rangeRegex); // Returns ["cat"]
+batStr.match(rangeRegex); // Returns ["bat"]
+matStr.match(rangeRegex); // Returns null
 
 // match range of numbers
 
@@ -45,3 +45,9 @@ let jennyStr = "Jenny8675309";
 let myRegex = /[a-z0-9]/ig;
 // matches all letters and numbers in jennyStr
 jennyStr.match(myRegex);
+
+// negated character set, you place a caret character (^) - set of characters that you do not want to match
+
+let quoteSample = "3 blind mice.";
+let negatedRegex = /[^0-9aeiou]/gi;
+let result = quoteSample.match(negatedRegex);
