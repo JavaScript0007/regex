@@ -70,3 +70,10 @@ let chewieRegex = /Aaa*/gi; // Change this line
 let aResult = chewieQuote.match(chewieRegex);
 
 console.log(aResult)
+
+let rickyAndCal = "Cal and Ricky both like racing.";
+// check just a beginnig of the strung
+let carRegex = /^Cal/; // Change this line
+let beginning = carRegex.test(rickyAndCal);
+
+console.log(beginning)
