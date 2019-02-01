@@ -72,8 +72,13 @@ let aResult = chewieQuote.match(chewieRegex);
 console.log(aResult)
 
 let rickyAndCal = "Cal and Ricky both like racing.";
-// check just a beginnig of the strung
+// check just a beginnig of the string using ^
 let carRegex = /^Cal/; // Change this line
 let beginning = carRegex.test(rickyAndCal);
 
 console.log(beginning)
+
+// check just the end of the string on match using $
+let theEnding = "This is a never ending story";
+let storyRegex = /story$/;
+storyRegex.test(theEnding); // returns true
