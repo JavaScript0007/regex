@@ -51,3 +51,22 @@ jennyStr.match(myRegex);
 let quoteSample = "3 blind mice.";
 let negatedRegex = /[^0-9aeiou]/gi;
 let result = quoteSample.match(negatedRegex);
+
+// match Characters that Occur Zero or More Times
+
+// an option that matches characters that occur zero or more times in row. The character to do this is the asterisk or star: *
+
+let soccerWord = "gooooooooal!";
+let gPhrase = "gut feeling";
+let oPhrase = "over the moon";
+let goRegex = /go*/;
+soccerWord.match(goRegex); // Returns ["goooooooo"]
+gPhrase.match(goRegex); // Returns ["g"]
+oPhrase.match(goRegex); // Returns null
+
+
+let chewieQuote = "Aaaaaaaaaaaaaaaarrrgahaa!";
+let chewieRegex = /Aaa*/gi; // Change this line
+let aResult = chewieQuote.match(chewieRegex);
+
+console.log(aResult)
